@@ -14,11 +14,6 @@ SSH is enabled to allow our integration tests to log in and restart the minion (
 
 # Environment Variables
 
-ENV SALT_VERSION=2014.7.4 \
-      SALTMASTER=saltmaster \
-     MINION_NAME=integrationspec_minion \
-   SALT_PASSWORD=59r{Y3*912
-
  - `SALT_VERSION`: version of salt to install, default: 2014.7.4
  - `SALT_PASSWORD`: the password that will be used for any accounts
  - `SALTMASTER`: the hostname of the salt master, default: `saltmaster`
