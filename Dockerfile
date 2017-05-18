@@ -1,12 +1,15 @@
 FROM        ubuntu:14.04
-MAINTAINER  Oliver Tupman "otupman@dts-workshop.com"
+LABEL maintainer "otupman@antillion.com"
+LABEL vendor "Antillion Ltd"
+LABEL architecture "x86_64"
+LABEL name "ci-salt-minion"
 
-ENV SALT_VERSION=2014.7.4 \
+ENV SALT_VERSION=2016.3.0 \
       SALTMASTER=saltmaster \
      MINION_NAME=ci_minion \
    SALT_PASSWORD=59r{Y3*912
 
-RUN apt-get install -y curl wget
+RUN apt-get update && apt-get install -y curl wget
 
 RUN wget -O install_salt.sh https://bootstrap.saltstack.com
 
